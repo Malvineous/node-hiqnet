@@ -13,7 +13,8 @@ What works:
 
 * Passing HiQnet messages over USB.
 * Some HiQnet commands:
-  * multiGetParameter
+  * locate - make device LEDs blink for identification
+  * multiGetParameter - read values from device
 
 What hasn't been implemented yet:
 
