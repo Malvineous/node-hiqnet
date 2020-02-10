@@ -1,0 +1,15 @@
+{
+  "name": "node-hiqnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Nielsen <malvineous@shikadi.net>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "node-hid": "^1.1.0"
+  }
+}
