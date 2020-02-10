@@ -13,7 +13,7 @@ What works:
 
 * Passing HiQnet messages over USB.
 * Some HiQnet commands:
-** multiGetParameter
+  * multiGetParameter
 
 What hasn't been implemented yet:
 
@@ -68,21 +68,21 @@ but the extraction is done under Linux.
 
 2. Get the offsets for the start of the XML data:
 
-    $ grep -F --byte-offset --only-matching --text '<Product' CrownXTiCDiDSi.dll
-    3815916:<Product
-    3872268:<Product
-    3928380:<Product
+       $ grep -F --byte-offset --only-matching --text '<Product' CrownXTiCDiDSi.dll
+       3815916:<Product
+       3872268:<Product
+       3928380:<Product
 
 3. Extract the XML.  We have to add 1 to the offsets reported by `grep` for some
    reason:
 
-    tail -c +3815917 CrownXTiCDiDSi.dll | xmllint --format --recover - > 1.xml
-    tail -c +3872269 CrownXTiCDiDSi.dll | xmllint --format --recover - > 2.xml
-    tail -c +3928381 CrownXTiCDiDSi.dll | xmllint --format --recover - > 3.xml
+       tail -c +3815917 CrownXTiCDiDSi.dll | xmllint --format --recover - > 1.xml
+       tail -c +3872269 CrownXTiCDiDSi.dll | xmllint --format --recover - > 2.xml
+       tail -c +3928381 CrownXTiCDiDSi.dll | xmllint --format --recover - > 3.xml
 
 4. Look through the XML files for the one that matches the product you need.
 
-    $ grep '<Product' *.xml
-    1.xml:<Product ClassID="47" Name="Crown CDi">
-    2.xml:<Product ClassID="48" Name="Crown DSi">
-    3.xml:<Product ClassID="46" Name="Crown XTi">
+       $ grep '<Product' *.xml
+       1.xml:<Product ClassID="47" Name="Crown CDi">
+       2.xml:<Product ClassID="48" Name="Crown DSi">
+       3.xml:<Product ClassID="46" Name="Crown XTi">
