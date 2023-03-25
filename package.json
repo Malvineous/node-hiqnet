@@ -9,7 +9,7 @@
   "author": "Adam Nielsen <malvineous@shikadi.net>",
   "license": "GPL-3.0",
   "dependencies": {
-    "debug": "^4.1.1",
-    "node-hid": "^1.1.0"
+    "debug": "^4.3.4",
+    "node-hid": "^2.1.2"
   }
 }
